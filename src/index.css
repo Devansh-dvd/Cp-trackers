@@ -1,0 +1,314 @@
+@import "tailwindcss";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; 
+}
+
+.vanta-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  color: white;
+}
+
+.title {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  z-index: 10;
+  
+}
+
+
+.content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 520px;
+  width: 1000px;
+  padding: 20px;              
+  box-sizing: border-box;        
+
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 5%;
+
+  
+  border: 4px solid;
+  border-image: linear-gradient(
+    90deg,
+    #3b82f6,
+    #8b5cf6,
+    #ec4899,
+    #8b5cf6,
+    #3b82f6
+  ) 1;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  
+  
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+.header,
+.toppers {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  overflow: auto;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+.cc{
+    margin-top: 5px;
+}
+/* .top{
+  margin-top: 40px;
+} */
+
+
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: 20px;
+}
+
+.column {
+  text-align: center;
+  color: white;
+}
+
+.user {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.topuser {
+  margin-top: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.box-grid {
+  display: flex;
+  gap: 90px;
+  justify-content: center;
+  margin-top: 40px;
+  position:absolute;
+  bottom: 20px;
+  z-index: 20;
+  left:450px;
+}
+
+.user-box {
+  width: 220px;
+  height: 90px;
+  border-radius: 20px;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  padding: 4px;
+  background: linear-gradient(
+    90deg,
+    #3b82f6,
+    #8b5cf6,
+    #ec4899,
+    #8b5cf6,
+    #3b82f6
+  );
+  background-size: 300% 300%;
+  animation: borderFlow 6s linear infinite;
+}
+
+
+.user-box.colored {
+  background: linear-gradient(135deg, #8b5cf6bb, #3b82f6bb);
+  border-radius: 16px;
+  width: 300px;
+  height: 100%;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0%;
+  display: inline-block;
+
+}
+
+.user-box.dark {
+  background: rgba(0,0,0,0.85);
+  border-radius: 16px;
+  width: 300px;
+  height: 100%;
+  color: white;
+  font-weight: 600;
+  border:2px solid white;
+  display: inline-block;
+}
+
+.user-box:hover {
+  transform: scale(1.05);
+  transition: 0.25s ease;
+}
+
+
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.topleet {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.topchef {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.topforce {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.user-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 equal columns */
+  align-items: center;
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+  font-size: 20px;
+}
+
+.header-row {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+}
+
+.content {
+  padding: 20px;
+}
+/* Generic row styling */
+.user-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+/* ❌ Disable hover on header row */
+.header-row:hover {
+  background: none !important;
+  animation: none !important;
+  transform: none !important;
+  cursor: default !important;
+}
+
+/* ✅ Hover only on DATA rows */
+.user-row:not(.header-row):hover {
+  background: linear-gradient(
+    90deg,
+    #3b82f6,
+    #8b5cf6,
+    #ec4899,
+    #8b5cf6,
+    #3b82f6
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 3s ease infinite;
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.user-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 12px;
+  color: white;
+  background: black;
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+/* HOVER (only normal rows, not selected) */
+.user-row:hover:not(.selected) {
+  background: linear-gradient(
+    90deg,
+    #3b82f6,
+    #8b5cf6,
+    #ec4899,
+    #8b5cf6,
+    #3b82f6
+  );
+}
+
+/* SELECTED ROW (persistent) */
+.selected {
+  background: linear-gradient(
+    90deg,
+    #8b5cf6,
+    #ec4899,
+    #8b5cf6,
+    #3b82f6
+  ) !important;
+  transform: scale(1.02);
+}
+
+/* Header row stays normal (no hover) */
+.header-row {
+  background: black !important;
+  cursor: default !important;
+}
+
+.header-row:hover {
+  background: black !important;
+}
