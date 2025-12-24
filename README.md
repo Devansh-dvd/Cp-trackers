@@ -47,9 +47,12 @@ What I learned while building this project:
 ---
 
 ## 🛠️ Technologies Used
-<h1>TECHNOLOGIES USED</h1>
-<img src="https://skillicons.dev/icons?i=react,vite,js,html,css,mongodb,nodejs,express,git,github" /><br>
-**Frontend**
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,vite,js,html,css,mongodb,nodejs,express,git,github" />
+</p>
+
+### Frontend
 - React
 - Vite
 - JavaScript
@@ -58,17 +61,13 @@ What I learned while building this project:
 - Chart.js
 - React Router
 
-**Backend**
+### Backend
 - Node.js
 - Express.js
 
-**Database**
+### Database
 - MongoDB
 
-**Tools**
+### Tools
 - Git
 - GitHub
-
-
-
-
