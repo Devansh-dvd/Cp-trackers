@@ -48,7 +48,7 @@ What I learned while building this project:
 
 ## 🛠️ Technologies Used
 <h1>TECHNOLOGIES USED</h1>
-<img src="https://skillicons.dev/icons?i=react,vite,js,html,css,mongodb,nodejs,express,git,github" />
+<img src="https://skillicons.dev/icons?i=react,vite,js,html,css,mongodb,nodejs,express,git,github" /><br>
 **Frontend**
 - React
 - Vite
